@@ -3,4 +3,4 @@
 POD_NAME=ubuntu-$(echo $USER | tr . -)-$$
 IMAGE=aphexairlines/docker-console
 
-exec kubectl run $POD_NAME --rm -i --tty --generator=run-pod/v1 --restart=Never --quiet=true --image $IMAGE -- bash
+exec kubectl run $POD_NAME --rm -i --tty --generator=run-pod/v1 --restart=Never --quiet=true --image $IMAGE -- bash "$@"
